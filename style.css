@@ -96,6 +96,30 @@ nav ul li a:hover::after {
     color: #4d4949;
 }
 
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #000000;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #ff0000;
+  }
+
 /* About section styles */
 #about {
     padding: 80px;
@@ -228,7 +252,7 @@ nav ul li a:hover::after {
 #courses .container{
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     padding:25px 20px;
   }
   
@@ -291,7 +315,7 @@ nav ul li a:hover::after {
   .container .box-container .box .content .btn{
     display: inline-block;
     padding:10px 30px;
-    color:rgb(27, 27, 27);
+    color:rgb(0, 0, 0);
     font-size: 16px;
   }
   
@@ -319,7 +343,6 @@ nav ul li a:hover::after {
     color:rgb(226, 0, 0);
     padding-right: 5px;
   }
-
 /* Button styles */
 .btn {
     display: block;
