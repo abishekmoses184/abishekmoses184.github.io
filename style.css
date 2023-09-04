@@ -82,6 +82,14 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+nav .fa-bars{
+    display: none;
+}
+
+nav .fa-xmark{
+    display: none;
+}
+
 /* Header text styles */
 .header-text {
     font-size: 60px;
@@ -127,22 +135,20 @@ nav ul li a:hover::after {
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-col-1 {
-    flex-basis: 35%;
-}
-
-.about-col-1 img {
+    margin-top: 2rem;
     width: 100%;
-    border-radius: 15px;
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
 }
-
-.about-col-2 {
-    flex-basis: 60%;
+.row img{
+    border: outset 1px gray;
+    margin-top: -6rem;
+    height: 350px;
+    width: 300px;
+}
+.row p{
+    font-size: 1.2rem;
 }
 
 .sub-title {
@@ -360,26 +366,43 @@ nav ul li a:hover::after {
   }
   
   #see-more:hover{
-    background-color: #800000;
+    background-color: #af0000;
     color:#ffffff;
   }
 
-/* Button styles */
-.btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff0000;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background-color 0.5s;
+  /* btn color #ff0000 */
+  .wraper {
+    flex: 1 1 200px;
+    margin: 15px;
+    display: none;
 }
 
-.btn:hover {
-    background: #ff0000;
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    padding: 6px;
+    font-size: 20px;
+    background-color: #a70404;
+    color: #fff;.work .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    transition: background 0.5s, transform 0.5s;
+  }
+  
+  .work .box-container .box:hover .image img{
+    transform: scale(1.1);
+  }
+    cursor: pointer;
+}
+
+
 
 /* Portfolio section styles */
 #portfolio {
@@ -414,38 +437,6 @@ nav ul li a:hover::after {
 /* Hover effect for the layer in the Portfolio section */
 .work:hover .layer {
     height: 100%;
-}
-
-/* btn color #ff0000 */
-.wraper {
-    flex: 1 1 200px;
-    margin: 15px;
-    display: none;
-}
-
-.btncontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button {
-    border: none;
-    border-radius: 5px;
-    width: 100px;
-    padding: 6px;
-    font-size: 20px;
-    background-color: #a70404;
-    color: #fff;.work .box-container .box .image img{
-    height: 100%;
-    width: 100%;
-    transition: background 0.5s, transform 0.5s;
-  }
-  
-  .work .box-container .box:hover .image img{
-    transform: scale(1.1);
-  }
-    cursor: pointer;
 }
 
 .wraper:nth-child(1) {
@@ -494,6 +485,11 @@ button {
     background: #ff0000;
 }
 
+.btn.btn2 {
+    background: #000000;
+    color: #ffffff;
+}
+
 .contact-right form {
     width: 100%;
 }
@@ -517,6 +513,23 @@ form .btn2 {
     cursor: pointer;
 }
 
+/* Button styles */
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff0000;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background: #ff0000;
+}
+
 /* Copyright section styles */
 .copyright {
     width: 100%;
@@ -532,14 +545,18 @@ form .btn2 {
 }
 
 /* CSS for small screens (max-width: 600px) */
+
 nav .fas {
     display: none;
 }
+
+
 
 @media (max-width: 600px) {
     /* Header background image for small screens */
     #header {
         background-image: url('Images/Abishek Moses J Web M.png');
+        
     }
 
     /* Adjusted header text styles for small screens */
@@ -652,4 +669,9 @@ nav .fas {
       
       }
     
+}
+#msg {
+    color: #ff0000;
+    margin-top: -40px;
+    display: block;
 }
