@@ -701,99 +701,100 @@ section{
 }
 
 
-/* ==================== Blog section css code ============================ */
+/* ==================== Instagram Carousel Styles ============================ */
 
-.blog-box{
-    padding: .5rem !important;
+.ig-carousel-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.blog{
-    position: relative;
+.ig-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Forces one-by-one visibility */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Chrome/Safari */
 }
 
-.cards{
-    padding: 1rem .1rem;
+.ig-track::-webkit-scrollbar { display: none; }
+
+.ig-post {
+  min-width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
 }
 
-.card{
-    background: var(--gradient-white-bg2);
-    box-shadow: rgba(0,0,0,0.18)0px 2px 4px;
-    padding: 1rem;
-    border-radius: 10px;
+.post-header {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.card-top{
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
+.post-header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--main-color);
 }
 
-.card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .3s;
-    display: block;
+.post-media {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Square by default */
+  background: #000;
+  display: flex;
+  align-items: center;
 }
 
-.card:hover img{
-    transform: scale(1.1);
+/* Auto-landscape handling: image fits without distortion */
+.post-media img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain; 
 }
 
-.card-info{
-    padding-bottom: .5rem;
+.post-footer {
+  padding: 12px;
 }
 
-.card-info h2{
-    font-size: 1.2rem;
-    margin-top: 1rem;
+.actions {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+  color: var(--text);
 }
 
-.data{
-    display: block;
-    margin: .2rem 0;
+.caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
-.card .excerpt{
-    color: var(--font-color);
-    margin-bottom: 1.5rem;
+.ig-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
 }
 
-.swiper-pagination{
-    position: relative !important;
-    margin-top: 3rem;
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
-.swiper-pagination-bullet{
-    height: 10px !important;
-    width: 30px !important;
-    border-radius: 25px !important;
-    background: var(--gradient-color-bg) !important;
-}
-
-.blog .showcase img{
-    position: absolute;
-    width: 90px;
-    height: 90px;
-}
-
-.blog .showcase .circle{
-    filter: blur(3px);
-}
-
-.blog .showcase .ring{
-    top: 0;
-    left: -1%;
-}
-
-.blog .showcase .half-ring{
-    top: 10%;
-    right: 10%;
-}
-
-.blog .showcase .second-circle{
-    top: 30%;
-    left: 2%;
-    filter: blur(1px);
+.dot.active {
+  background: var(--main-color);
+  transform: scale(1.2);
 }
 
 
