@@ -179,6 +179,17 @@ ScrollReveal({
     // reset: true ,
 });
 
+const igTrack = document.querySelector('.ig-track');
+const dots = document.querySelectorAll('.dot');
+
+if (igTrack) {
+  igTrack.addEventListener('scroll', () => {
+    const index = Math.round(igTrack.scrollLeft / igTrack.offsetWidth);
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  });
+}
 
 ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top" });
 ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
