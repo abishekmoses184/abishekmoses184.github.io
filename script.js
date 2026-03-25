@@ -191,6 +191,44 @@ if (igTrack) {
   });
 }
 
+// 1. Tab Switching Logic
+const tabs = document.querySelectorAll('.about-btn button');
+const contents = document.querySelectorAll('.content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('show'));
+        
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.content).classList.add('show');
+    });
+});
+
+// 2. Skill Progress & Counter
+const counters = document.querySelectorAll('.counter span');
+counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    const circle = counter.parentElement.parentElement.querySelector('circle');
+    
+    // Animate Text
+    counter.innerText = target;
+    
+    // Animate Circle: offset = 472 - (472 * target / 100)
+    const offset = 472 - (472 * target / 100);
+    circle.style.strokeDashoffset = offset;
+});
+
+// 3. Mobile Menu
+const menuIcon = document.querySelector('.menu-icon');
+const navlist = document.querySelector('.navlist');
+
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('active');
+    navlist.classList.toggle('active');
+    document.body.classList.toggle('open');
+});
+
 ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top" });
 ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
 ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
