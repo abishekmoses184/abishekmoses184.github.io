@@ -799,9 +799,6 @@ section{
 
 /* ==================== Gallery section css code ============================ */
 
-
-
-/* CSS for Snap Scrolling */
 .feed-container {
   height: 100vh;
   overflow-y: scroll;
@@ -814,7 +811,63 @@ section{
     scrolllet
   scroll-snap-align: start;
 }
+ :root {
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --blur: 15px;
+        }
 
+ body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container for the sliding posts */
+        .feed-wrapper {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            /* Animation: name | duration | timing | iteration */
+            animation: autoSwipe 20s linear infinite;
+        }
+
+        /* Individual Social Post Card */
+        .glass-card {
+            min-width: 300px;
+            height: 400px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur));
+            -webkit-backdrop-filter: blur(var(--blur));
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .post-header { font-weight: bold; font-size: 1.1rem; }
+        .post-body { font-size: 0.9rem; opacity: 0.8; line-height: 1.5; }
+        .post-footer { font-size: 0.8rem; color: #4facfe; }
+
+        /* Smooth Landscape Swipe Animation */
+        @keyframes autoSwipe {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Pause on hover for readability */
+        .feed-wrapper:hover {
+            animation-play-state: paused;
+        }
 
 /* ==================== Contact section css code ============================ */
 
