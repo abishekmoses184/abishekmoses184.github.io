@@ -893,7 +893,16 @@ section{
   transform: scale(1.2);
 }
 
-
+/* CSS for Snap Scrolling */
+.feed-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.post {
+  height: 100vh;
+  scroll-snap-align: start;
+}
 
 
 /* ==================== Contact section css code ============================ */
