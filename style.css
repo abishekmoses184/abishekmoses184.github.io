@@ -847,52 +847,6 @@ section{
   align-items: center;
 }
 
-/* Auto-landscape handling: image fits without distortion */
-.post-media img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain; 
-}
-
-.post-footer {
-  padding: 12px;
-}
-
-.actions {
-  font-size: 1.5rem;
-  display: flex;
-  gap: 15px;
-  margin-bottom: 8px;
-  color: var(--text);
-}
-
-.caption {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-}
-
-.ig-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  background: var(--text-muted);
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-.dot.active {
-  background: var(--main-color);
-  transform: scale(1.2);
-}
-
 /* CSS for Snap Scrolling */
 .feed-container {
   height: 100vh;
