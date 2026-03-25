@@ -799,53 +799,7 @@ section{
 
 /* ==================== Gallery section css code ============================ */
 
-.ig-carousel-container {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
 
-.ig-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Forces one-by-one visibility */
-  scroll-behavior: smooth;
-  scrollbar-width: none; /* Hide scrollbar for Chrome/Safari */
-}
-
-.ig-track::-webkit-scrollbar { display: none; }
-
-.ig-post {
-  min-width: 100%;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  background: var(--glass-bg);
-}
-
-.post-header {
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.post-header img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1.5px solid var(--main-color);
-}
-
-.post-media {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Square by default */
-  background: #000;
-  display: flex;
-  align-items: center;
-}
 
 /* CSS for Snap Scrolling */
 .feed-container {
