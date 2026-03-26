@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography — Abishek Moses J</title>
+  <link rel="shortcut icon" type="image/png" href="Images/20220310_17395812.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+  *, *::before, *::after { padding:0;margin:0;box-sizing:border-box;list-style:none; }
+  html { scroll-behavior:smooth; }
+
+  :root {
+    --font:'Poppins',sans-serif;
+    --bg:#080818; --text:#e8eaf6; --text-muted:#8b8fa8; --main-color:#e6006d;
+    --grad:linear-gradient(135deg,#ff1f8e 0%,#7c3aed 55%,#06b6d4 100%);
+    --glass-bg:rgba(255,255,255,0.06); --glass-border:rgba(255,255,255,0.12);
+    --glass-shine:rgba(255,255,255,0.18); --glass-shadow:0 8px 40px rgba(0,0,0,0.50);
+    --glass-inset:inset 0 1px 0 rgba(255,255,255,0.20),inset 0 -1px 0 rgba(0,0,0,0.15);
+    --blur:blur(22px) saturate(180%); --radius:18px;
+    --hover-shadow:rgba(0,0,0,0.19) 0 10px 20px,rgba(0,0,0,0.23) 0 6px 6px;
+  }
+  body.light {
+    --bg:#edf2fb; --text:#0f1124; --text-muted:#5a607a;
+    --glass-bg:rgba(255,255,255,0.58); --glass-border:rgba(120,130,200,0.18);
+    --glass-shine:rgba(255,255,255,0.90); --glass-shadow:0 8px 40px rgba(100,110,200,0.15);
+    --glass-inset:inset 0 1px 0 rgba(255,255,255,0.95),inset 0 -1px 0 rgba(100,110,200,0.08);
+  }
+  body.light .orb { opacity:.15; }
+  body.light .orb-1 { background:radial-gradient(circle,#c4b5fd,transparent 70%); }
+  body.light .orb-2 { background:radial-gradient(circle,#f9a8d4,transparent 70%); }
+  body.light .orb-3 { background:radial-gradient(circle,#67e8f9,transparent 70%); }
+  body.light header { background:rgba(230,238,255,.75); border-color:rgba(150,160,220,.22); box-shadow:0 8px 40px rgba(100,110,200,.12),inset 0 1px 0 rgba(255,255,255,.9); }
+  body.light .navlist li a { color:var(--text-muted); }
+  body.light .navlist li a:hover { background:rgba(100,110,200,.08);color:var(--text); }
+  body.light ul.navlist { background:rgba(225,232,255,.97); }
+  body.light footer { border-color:rgba(150,160,230,.2); }
+  body.light .menu-icon .bar, body.light .menu-icon::before, body.light .menu-icon::after { background:var(--text); }
+  body,header,footer,.glass-card { transition:background-color .4s ease,border-color .4s ease,box-shadow .4s ease,color .3s ease; }
+
+  body { font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh; }
+  a { text-decoration:none;color:inherit; }
+  img { max-width:100%;display:block; }
+
+  /* orbs */
+  .bg-canvas { position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none; }
+  .orb { position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:orbFloat 18s ease-in-out infinite; }
+  .orb-1 { width:600px;height:600px;background:radial-gradient(circle,#7c3aed,transparent 70%);top:-15%;left:-10%;animation-delay:0s; }
+  .orb-2 { width:500px;height:500px;background:radial-gradient(circle,#ff1f8e,transparent 70%);top:30%;right:-10%;animation-delay:-6s; }
+  .orb-3 { width:400px;height:400px;background:radial-gradient(circle,#06b6d4,transparent 70%);bottom:5%;left:20%;animation-delay:-12s; }
+  @keyframes orbFloat { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(30px,-40px) scale(1.08)} 66%{transform:translate(-20px,20px) scale(0.95)} }
+
+  /* glass */
+  .glass-card {
+    background:var(--glass-bg);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+    border:1px solid var(--glass-border);border-top:1px solid var(--glass-shine);
+    box-shadow:var(--glass-shadow),var(--glass-inset);border-radius:var(--radius);
+    position:relative;overflow:hidden;--mx:50%;--my:50%;
+  }
+  .glass-card::before { content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--glass-shine) 0%,transparent 45%);border-radius:inherit;pointer-events:none;opacity:.5; }
+  .glass-card::after { content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.10) 0%,transparent 55%);pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .3s; }
+  .glass-card:hover::after { opacity:1; }
+
+  /* header */
+  header {
+    padding:15px 6%;position:fixed;top:14px;left:50%;transform:translateX(-50%);
+    width:calc(100% - 3rem);max-width:1400px;
+    display:flex;align-items:center;justify-content:space-between;
+    background:rgba(8,8,24,.52);backdrop-filter:blur(28px) saturate(200%);-webkit-backdrop-filter:blur(28px) saturate(200%);
+    border:1px solid var(--glass-border);border-top:1px solid rgba(255,255,255,.18);
+    box-shadow:var(--glass-shadow),var(--glass-inset);border-radius:50px;z-index:1000;
+  }
+  .logo { font-size:1.7rem;font-weight:700; }
+  .logo-span { background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent; }
+  .nav-back {
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid var(--glass-border);padding:8px 16px;border-radius:50px;
+    font-size:.85rem;font-weight:600;color:var(--text-muted);transition:all .3s;
+  }
+  .nav-back:hover { background:rgba(255,255,255,.1);color:var(--text); }
+  .right-header { display:flex;align-items:center;gap:.8rem; }
+
+  /* menu */
+  .menu-icon { display:none;width:30px;height:30px;cursor:pointer;flex-direction:column;justify-content:center;gap:6px;position:relative; }
+  .menu-icon .bar, .menu-icon::before, .menu-icon::after { content:'';display:block;width:100%;height:4px;border-radius:3px;background:var(--text);transition:.4s; }
+  .menu-icon::before,.menu-icon::after { position:absolute;left:0; }
+  .menu-icon::before { top:0; }
+  .menu-icon::after { bottom:0; }
+  .menu-icon.active::before { transform:rotate(45deg) translate(7px,7px); }
+  .menu-icon.active::after  { transform:rotate(-45deg) translate(7px,-7px); }
+  .menu-icon.active .bar    { opacity:0;transform:scaleX(0); }
+  ul.navlist { display:flex;gap:.25rem; }
+  .navlist li a { display:inline-flex;font-weight:600;font-size:.9rem;padding:.4rem .9rem;border-radius:50px;color:var(--text-muted);transition:all .3s; }
+  .navlist li a:hover { background:rgba(255,255,255,.08);color:var(--text); }
+  .navlist li a.active { background:var(--grad);color:#fff; }
+
+  /* theme toggle */
+  .theme-toggle { width:56px;height:28px;border-radius:50px;background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1.5px solid var(--glass-border);box-shadow:var(--glass-inset);cursor:pointer;position:relative;flex-shrink:0;outline:none; }
+  .toggle-track { position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none;font-size:11px; }
+  .toggle-thumb { position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--grad);box-shadow:0 2px 8px rgba(124,58,237,.5);transition:transform .38s cubic-bezier(.34,1.56,.64,1),background .4s;pointer-events:none; }
+  body.light .toggle-thumb { transform:translateX(28px);background:linear-gradient(135deg,#fbbf24,#f59e0b);box-shadow:0 2px 8px rgba(251,191,36,.5); }
+  .overlay { display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);z-index:900; }
+
+  /* btn */
+  .btn { display:inline-flex;align-items:center;gap:.5rem;padding:10px 20px;border-radius:5px;font-family:var(--font);font-weight:500;font-size:1rem;cursor:pointer;border:none;transition:all .3s ease; }
+  .btn-primary { background:var(--grad);color:#fff; }
+  .btn-primary:hover { box-shadow:var(--hover-shadow); }
+
+  /* grad text */
+  .grad-text { background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent; }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    min-height:60vh;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:140px 8% 80px;position:relative;z-index:1;
+  }
+  .page-hero-inner { max-width:720px; }
+  .service-icon-big {
+    width:90px;height:90px;border-radius:24px;background:var(--grad);
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:2.8rem;color:#fff;margin-bottom:1.5rem;
+    box-shadow:0 8px 32px rgba(124,58,237,.45);
+    animation:iconFloat 4s ease-in-out infinite;
+  }
+  @keyframes iconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .breadcrumb { font-size:.82rem;color:var(--text-muted);margin-bottom:1rem; }
+  .breadcrumb a { color:var(--main-color);font-weight:600; }
+  .breadcrumb a:hover { text-decoration:underline; }
+  .page-hero h1 { font-size:3rem;font-weight:800;margin-bottom:1rem;line-height:1.15; }
+  .page-hero p  { font-size:.95rem;color:var(--text-muted);line-height:1.75;max-width:580px;margin:0 auto; }
+
+  /* ── CONTENT SECTIONS ── */
+  .content-section { padding:70px 8%;position:relative;z-index:1; }
+
+  .section-heading { font-size:1.4rem;font-weight:700;color:var(--main-color);margin-bottom:.3rem; }
+  .section-sub     { font-size:.85rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.12em;font-weight:200;margin-bottom:2rem;display:block; }
+
+  /* overview grid */
+  .overview-grid { display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start; }
+  .overview-text h2 { font-size:2.1rem;font-weight:700;line-height:1.3;margin-bottom:1rem; }
+  .overview-text p  { font-size:.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:1rem; }
+  .overview-img { border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4); }
+  .overview-img img { width:100%;height:340px;object-fit:cover; }
+
+  /* tools grid */
+  .tools-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:1rem; }
+  .tool-card { padding:1.5rem;border-radius:16px;text-align:center;transition:transform .3s; }
+  .tool-card:hover { transform:translateY(-5px); }
+  .tool-icon { font-size:2.2rem;margin-bottom:.75rem;display:block; }
+  .tool-card h3 { font-size:1rem;font-weight:600;margin-bottom:.4rem; }
+  .tool-card p  { font-size:.82rem;color:var(--text-muted);line-height:1.6; }
+
+  /* process steps */
+  .steps-list { display:flex;flex-direction:column;gap:1.25rem;margin-top:1rem; }
+  .step-item { display:flex;gap:1.25rem;align-items:flex-start;padding:1.25rem; border-radius:14px; }
+  .step-num { flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800;color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.4); }
+  .step-body h3 { font-size:1rem;font-weight:600;margin-bottom:.3rem; }
+  .step-body p  { font-size:.85rem;color:var(--text-muted);line-height:1.7; }
+
+  /* gallery strip */
+  .gallery-strip { display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-top:1rem; }
+  .gallery-thumb { border-radius:14px;overflow:hidden;aspect-ratio:4/3; }
+  .gallery-thumb img { width:100%;height:100%;object-fit:cover;transition:transform .4s; }
+  .gallery-thumb:hover img { transform:scale(1.06); }
+
+  /* CTA strip */
+  .cta-strip {
+    padding:3rem;border-radius:24px;text-align:center;
+    background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(255,31,142,.06));
+    border:1px solid rgba(124,58,237,.2);margin-top:3rem;
+  }
+  .cta-strip h2 { font-size:1.8rem;font-weight:700;margin-bottom:.75rem; }
+  .cta-strip p  { font-size:.9rem;color:var(--text-muted);margin-bottom:1.5rem; }
+
+  /* footer */
+  footer { text-align:center;margin:0 8%;padding:2rem 0;border-top:2px solid rgba(255,255,255,.08);position:relative;z-index:1; }
+  footer p { font-size:.9rem;color:var(--text-muted); }
+  .foot-span { background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600; }
+
+  /* scroll-to-top */
+  #progress { position:fixed;bottom:60px;right:10px;width:50px;height:50px;display:none;place-items:center;border-radius:50%;cursor:pointer;z-index:999;background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow); }
+  #progress-value { display:grid;place-items:center;height:calc(100% - 10px);width:calc(100% - 10px);background:var(--grad);border-radius:50%;color:#fff;font-size:1.2rem; }
+
+  /* reveal */
+  .reveal      { opacity:0;transform:translateY(40px); transition:opacity .7s ease,transform .7s ease; }
+  .reveal-left { opacity:0;transform:translateX(-50px);transition:opacity .7s ease,transform .7s ease; }
+  .reveal-right{ opacity:0;transform:translateX(50px); transition:opacity .7s ease,transform .7s ease; }
+  .reveal.on,.reveal-left.on,.reveal-right.on { opacity:1;transform:none; }
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  /* responsive */
+  @media(max-width:900px) { .overview-grid{grid-template-columns:1fr} .overview-img{order:-1} }
+  @media(max-width:768px) {
+    header{top:8px;width:calc(100% - 2rem);padding:.8rem 1.4rem}
+    .menu-icon{display:flex}
+    ul.navlist{position:fixed;top:0;right:-100%;width:min(280px,80vw);height:100vh;background:rgba(8,8,24,.97);backdrop-filter:blur(30px);flex-direction:column;padding:5rem 2rem 2rem;gap:.4rem;border-left:1px solid rgba(255,255,255,.08);transition:right .4s cubic-bezier(.4,0,.2,1);z-index:950;}
+    ul.navlist.active{right:0}
+    .page-hero h1{font-size:2.2rem}
+    .content-section{padding:50px 5%}
+    .cta-strip{padding:2rem 1.5rem}
+  }
+  @media(max-width:530px){ html{font-size:85%} }
+  </style>
+</head>
+<body>
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <a href="index.html" class="logo"><span class="logo-span">Abishek</span> Moses J</a>
+    <ul class="navlist" id="navlist">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services" class="active">Services</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="right-header">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <div class="toggle-track"><span>🌙</span><span>☀️</span></div>
+        <div class="toggle-thumb"></div>
+      </button>
+      <div class="menu-icon" id="menuIcon"><div class="bar"></div></div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero reveal">
+    <div class="page-hero-inner">
+      <div class="service-icon-big"><i class='bx bx-camera'></i></div>
+      <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="index.html#services">Services</a> &rsaquo; Photography</p>
+      <h1>Photography <span class="grad-text">Services</span></h1>
+      <p>From golden-hour mobile shots to DSLR studio setups — I capture moments that last forever, then refine them with professional editing tools and creative intuition.</p>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="content-section">
+    <h2 class="section-heading">Overview</h2>
+    <span class="section-sub">What this service covers</span>
+    <div class="overview-grid">
+      <div class="overview-text reveal-left">
+        <h2>Capturing Life,<br><span class="grad-text">One Frame at a Time</span></h2>
+        <p>My photography journey started with mobile photography, where I developed an eye for composition, lighting, and timing. I'm currently expanding into DSLR and mirrorless systems to bring even higher quality to every project.</p>
+        <p>Whether it's portraiture, street photography, event coverage, or creative concept shoots, I approach every session with the same dedication — understanding the subject, finding the perfect light, and telling a visual story.</p>
+        <p>Post-processing is an integral part of my workflow. I use Adobe Photoshop and PicsArt on both PC and mobile, and increasingly leverage AI-powered tools to achieve results that are polished, vivid, and true to the intended mood.</p>
+      </div>
+      <div class="overview-img reveal-right glass-card">
+        <img src="Images/20220310_173958.png" alt="Photography sample" onerror="this.src='Images/abishek c 1.png'">
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="content-section" style="padding-top:0">
+    <h2 class="section-heading">Tools &amp; Software</h2>
+    <span class="section-sub">My editing stack</span>
+    <div class="tools-grid">
+      <div class="tool-card glass-card reveal d1">
+        <span class="tool-icon">🎨</span>
+        <h3>Adobe Photoshop</h3>
+        <p>Industry-standard retouching, compositing, and colour grading for professional results.</p>
+      </div>
+      <div class="tool-card glass-card reveal d2">
+        <span class="tool-icon">📱</span>
+        <h3>PicsArt</h3>
+        <p>On-the-go editing powerhouse — great for quick creative edits and social media content.</p>
+      </div>
+      <div class="tool-card glass-card reveal d3">
+        <span class="tool-icon">🤖</span>
+        <h3>AI Enhancement Tools</h3>
+        <p>Leveraging AI upscalers and smart retouchers to boost sharpness, reduce noise, and enhance detail.</p>
+      </div>
+      <div class="tool-card glass-card reveal d1">
+        <span class="tool-icon">📷</span>
+        <h3>DSLR / Mobile</h3>
+        <p>Currently working with mobile cameras and transitioning to DSLR for greater creative control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="content-section" style="padding-top:0">
+    <h2 class="section-heading">My Process</h2>
+    <span class="section-sub">How I work</span>
+    <div class="steps-list">
+      <div class="step-item glass-card reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Brief &amp; Concept</h3>
+          <p>I start with a conversation — understanding the purpose, audience, mood, and any specific requirements. This shapes the entire shoot strategy.</p>
+        </div>
+      </div>
+      <div class="step-item glass-card reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Scouting &amp; Setup</h3>
+          <p>Location matters. I scout the best spots, assess natural light conditions, and set up accordingly to make the most of the environment.</p>
+        </div>
+      </div>
+      <div class="step-item glass-card reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>The Shoot</h3>
+          <p>Capturing a variety of angles, compositions, and moments — ensuring there's plenty of choice during selection and editing.</p>
+        </div>
+      </div>
+      <div class="step-item glass-card reveal">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Editing &amp; Delivery</h3>
+          <p>Colour grading, retouching, and export in the required format and resolution. Final delivery via Google Drive or direct transfer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="content-section" style="padding-top:0">
+    <h2 class="section-heading">Sample Work</h2>
+    <span class="section-sub">A glimpse of my photography</span>
+    <div class="gallery-strip">
+      <div class="gallery-thumb glass-card reveal d1"><img src="Images/blog/1.jpg" alt="Photo 1"></div>
+      <div class="gallery-thumb glass-card reveal d2"><img src="Images/blog/2.jpg" alt="Photo 2"></div>
+      <div class="gallery-thumb glass-card reveal d3"><img src="Images/blog/3.jpg" alt="Photo 3"></div>
+      <div class="gallery-thumb glass-card reveal d1"><img src="Images/blog/4.jpg" alt="Photo 4"></div>
+      <div class="gallery-thumb glass-card reveal d2"><img src="Images/blog/5.jpg" alt="Photo 5"></div>
+      <div class="gallery-thumb glass-card reveal d3"><img src="Images/blog/6.jpg" alt="Photo 6"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="content-section" style="padding-top:0">
+    <div class="cta-strip glass-card reveal">
+      <h2>Ready to Book a <span class="grad-text">Shoot?</span></h2>
+      <p>Let's create something beautiful together. Drop me a message and let's discuss your project.</p>
+      <a href="index.html#contact" class="btn btn-primary">Get In Touch <i class='bx bx-right-arrow-alt'></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2025 by <span class="foot-span">Abishek Moses J</span> || All Rights Reserved.</p>
+  </footer>
+  <div id="progress" role="button" aria-label="Back to top" tabindex="0">
+    <span id="progress-value"><i class='bx bxs-chevrons-up'></i></span>
+  </div>
+
+  <script>
+  const themeToggle=document.getElementById('themeToggle');
+  const saved=localStorage.getItem('theme');const sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(saved==='light'||(!saved&&!sysDark))document.body.classList.add('light');
+  themeToggle.addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark');});
+
+  const menuIcon=document.getElementById('menuIcon');const navlist=document.getElementById('navlist');const overlay=document.getElementById('overlay');
+  function openMenu(){menuIcon.classList.add('active');navlist.classList.add('active');overlay.style.display='block';}
+  function closeMenu(){menuIcon.classList.remove('active');navlist.classList.remove('active');overlay.style.display='none';}
+  menuIcon.addEventListener('click',()=>menuIcon.classList.contains('active')?closeMenu():openMenu());
+  overlay.addEventListener('click',closeMenu);
+
+  const progressEl=document.getElementById('progress');
+  window.addEventListener('scroll',()=>{const pos=document.documentElement.scrollTop;const max=document.documentElement.scrollHeight-document.documentElement.clientHeight;const pct=Math.round((pos/max)*100);progressEl.style.display=pos>100?'grid':'none';progressEl.style.background=`conic-gradient(rgba(255,255,255,.12) ${pct}%,rgba(124,58,237,.35) ${pct}%)`;});
+  progressEl.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');revealObs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revealObs.observe(el));
+
+  document.querySelectorAll('.glass-card').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');});});
+  </script>
+</body>
+</html>

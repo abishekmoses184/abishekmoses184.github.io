@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="Images/20220310_17395812.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishek Moses J</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <a href="#" class="logo"><span>Abishek</span> Moses J</a>
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="right-header">
+            <!-- Dark / Light Mode Toggle -->
+            <button class="theme-toggle" id="themeToggle" title="Toggle Dark / Light Mode">
+                <i class='bx bx-moon' id="themeIcon"></i>
+            </button>
+            <a href="#contact" class="btn">Let's chat <i class='bx bx-message-dots'></i></a>
+            <div class="menu-icon">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================== HOME ===================== -->
+    <section class="home" id="home">
+        <div class="hero-info">
+            <h3>Welcome To My World</h3>
+            <h1>Hi, I'm Abishek Moses J</h1>
+            <div class="text-animate">
+                <h2>Video Editor</h2>
+            </div>
+            <div class="hero-bio">
+                <p class="bio-short">
+                    Hi, I'm Abishek Moses J, a 25-year-old with a BCA degree from SRM Institute of Science and
+                    Technology and an MBA in HR and Marketing from S.I.V.E.T College. My hometown is Chennai, Tamil Nadu.
+                </p>
+                <p class="bio-full hidden">
+                    I'm passionate about photography, editing, PC service, modeling, acting, and creating content for
+                    my meme page and YouTube channel. I'm also a talented badminton player. As a dedicated and driven
+                    individual, I'm committed to lifelong learning and self-improvement. I'm excited to begin this new
+                    chapter in my life and contribute to a team environment.
+                </p>
+                <a href="#" class="read-more-btn" id="bioReadMore">
+                    Read More <i class='bx bx-chevron-down'></i>
+                </a>
+            </div>
+            <div class="btn-box">
+                <a href="mailto:abishekmoses184@gmail.com" class="btn">Hire Me Now! <i class='bx bx-right-arrow-alt'></i></a>
+                <a href="DOC/ABISHEK MOSES J.pdf" target="_blank" class="btn d-CV">Get My CV <i class='bx bx-download'></i></a>
+            </div>
+            <div class="social-media">
+                <div class="bg-icon">
+                    <a href="https://www.instagram.com/abishekmoses18" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i></a>
+                    <span></span>
+                </div>
+                <div class="bg-icon">
+                    <a href="https://github.com/abishekmoses184" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    <span></span>
+                </div>
+                <div class="bg-icon">
+                    <a href="https://x.com/abishekmoses18" target="_blank" rel="noopener"><i class='bx bxl-twitter'></i></a>
+                    <span></span>
+                </div>
+                <div class="bg-icon">
+                    <a href="https://www.facebook.com/profile.php?id=100063739915023" target="_blank" rel="noopener"><i class='bx bxl-facebook'></i></a>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="img-hero">
+            <img src="Images/abishek c 1.png" alt="Abishek Moses J">
+            <div class="rotate-text">
+                <div class="text">
+                    <p>I'm Youtuber And I'm Video Editor And I'm Model</p>
+                </div>
+                <span><i></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Images/aboutMe AM.png" alt="About Abishek Moses" class="aboutHero">
+            <div class="showcase-ring">
+                <img src="shapes/ring.png" class="ring" alt="">
+                <img src="shapes/circle.png" class="circle" alt="">
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About Me</h2>
+            <h3>1 Year Experience in Video Editing</h3>
+            <p>I've included below my experience with various software, as well as my details and other relevant
+                information. I would appreciate it if you could review my projects and details.</p>
+            <div class="about-btn">
+                <button class="active" data-tab="0">Main Skills</button>
+                <button data-tab="1">Awards</button>
+                <button data-tab="2">Education</button>
+            </div>
+            <div class="content-btn">
+                <!-- Tab 0: Main Skills -->
+                <div class="content active-tab">
+                    <div class="text-box">
+                        <p>Video Editing Software</p>
+                        <span>Adobe Premiere Pro &middot; DaVinci Resolve</span>
+                    </div>
+                    <div class="text-box">
+                        <p>Audio Production Software</p>
+                        <span>FL Studio &middot; Logic Pro X</span>
+                    </div>
+                    <div class="text-box">
+                        <p>Graphic Design Software</p>
+                        <span>Canva &middot; Adobe Photoshop &middot; PicsArt</span>
+                    </div>
+                    <div class="text-box extra-content hidden">
+                        <p>Photography Tools</p>
+                        <span>Mobile Photography &middot; DSLR (Learning) &middot; AI Enhancement</span>
+                    </div>
+                    <a href="#" class="tab-read-more read-more-btn" data-target="skills-extra">
+                        Read More <i class='bx bx-chevron-down'></i>
+                    </a>
+                </div>
+
+                <!-- Tab 1: Awards -->
+                <div class="content">
+                    <div class="text-box">
+                        <p>Maanava Chemmal Award</p>
+                        <span>Award for achieving 100% Attendance and Performance during the 2016–2017 academic year.</span>
+                    </div>
+                    <div class="text-box">
+                        <p>Judge – Event: Satan's Satire</p>
+                        <span>Served as a judge at the college event as a Social Media Influencer.</span>
+                    </div>
+                    <div class="text-box">
+                        <p>Indian Missionary Movement</p>
+                        <span>Tribal Children Education Program — actively participated in community service.</span>
+                    </div>
+                    <div class="text-box extra-content hidden">
+                        <p>Content Creator Recognition</p>
+                        <span>Built a meme page and YouTube channel with a growing audience in Tamil Nadu.</span>
+                    </div>
+                    <a href="#" class="tab-read-more read-more-btn" data-target="awards-extra">
+                        Read More <i class='bx bx-chevron-down'></i>
+                    </a>
+                </div>
+
+                <!-- Tab 2: Education -->
+                <div class="content">
+                    <div class="text-box">
+                        <p>Master's Degree in Business Administration</p>
+                        <span>Human Resource &amp; Marketing — S.I.V.E.T College</span>
+                    </div>
+                    <div class="text-box">
+                        <p>Bachelor's Degree in Computer Application</p>
+                        <span>SRM Institute of Science and Technology, Ramapuram</span>
+                    </div>
+                    <div class="text-box">
+                        <p>Internships &amp; Work Experience</p>
+                        <span>HR Technology &middot; Sales Executive in Marketing</span>
+                    </div>
+                    <div class="text-box extra-content hidden">
+                        <p>Online Courses &amp; Bootcamps</p>
+                        <span>3D Modeling for Virtual Reality &middot; Film as a Career &middot; AWS Certification &middot; Google Digital Marketing</span>
+                    </div>
+                    <a href="#" class="tab-read-more read-more-btn" data-target="edu-extra">
+                        Read More <i class='bx bx-chevron-down'></i>
+                    </a>
+                </div>
+            </div><!-- /.content-btn -->
+        </div><!-- /.about-content -->
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services" id="services">
+        <div class="main-text">
+            <h2 class="heading">My Services</h2>
+            <span>What I Will Do For You</span>
+        </div>
+        <div class="allServices">
+            <div class="servicesItem">
+                <div class="icon-services">
+                    <i class='bx bx-camera'></i>
+                    <span></span>
+                </div>
+                <h3>Photography</h3>
+                <p>I'm a mobile photographer learning DSLR photography, and I edit my photos using Photoshop and
+                    PicsArt on PC and mobile, with some AI assistance.</p>
+                <a href="photography.html" class="readMore">Read More</a>
+            </div>
+
+            <div class="servicesItem">
+                <div class="icon-services">
+                    <i class='bx bx-movie'></i>
+                    <span></span>
+                </div>
+                <h3>Video Editing</h3>
+                <p>I have completed multiple video projects, transitioning from Kinemaster to professional PC tools
+                    like DaVinci Resolve, Premiere Pro, CapCut, and AI-assisted editing.</p>
+                <a href="video-editing.html" class="readMore">Read More</a>
+            </div>
+
+            <div class="servicesItem">
+                <div class="icon-services">
+                    <i class='bx bx-desktop'></i>
+                    <span></span>
+                </div>
+                <h3>UI / UX Design</h3>
+                <p>I craft user-friendly interfaces and intuitive digital experiences using Canva and design
+                    principles focused on clarity, accessibility, and visual appeal.</p>
+                <a href="uiux-design.html" class="readMore">Read More</a>
+            </div>
+
+            <div class="servicesItem">
+                <div class="icon-services">
+                    <i class='bx bx-music'></i>
+                    <span></span>
+                </div>
+                <h3>SFX &amp; Audio</h3>
+                <p>I produce and design sound effects and music using FL Studio and Logic Pro X, adding professional
+                    audio layers to video and creative projects.</p>
+                <a href="sfx-audio.html" class="readMore">Read More</a>
+            </div>
+        </div>
+
+        <div class="proposal">
+            <div class="showcase">
+                <img src="shapes/ring.png" class="ring" alt="">
+                <img src="shapes/circle.png" class="circle" alt="">
+                <img src="shapes/circle.png" class="circle2" alt="">
+                <img src="shapes/circle.png" class="circle3" alt="">
+                <img src="shapes/half-ring.png" class="half-ring" alt="">
+            </div>
+        </div><!-- /.proposal -->
+    </section>
+
+    <!-- ===================== PORTFOLIO ===================== -->
+    <section class="portfolio" id="portfolio">
+        <div class="main-text">
+            <h2 class="heading">My Portfolio</h2>
+            <span>Recent Work &amp; Projects</span>
+        </div>
+        <div class="fillter-buttons">
+            <button class="button mixitup-control-active" data-filter="all">All Work</button>
+            <button class="button" data-filter=".web">Video Editing</button>
+            <button class="button" data-filter=".uiux">UI/UX Design</button>
+            <button class="button" data-filter=".branding">SFX</button>
+        </div>
+
+        <div class="portfolio-gallery">
+            <div class="portfolio-box mix uiux">
+                <div class="portfolio-content">
+                    <h3>UI/UX Design</h3>
+                    <p>A clean interface prototype showcasing modern design principles and user flow.</p>
+                    <a href="#" class="readMore">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="Images/portfolio/1.jpg" alt="UI/UX Design Project">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Video Editing — Short Film</h3>
+                    <p>Professional short film cut using DaVinci Resolve with colour grading and SFX.</p>
+                    <a href="video-editing.html" class="readMore">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="Images/portfolio/2.jpg" alt="Video Editing Project">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Video Editing — Reel</h3>
+                    <p>Instagram reel edited with dynamic transitions, text overlays, and audio sync.</p>
+                    <a href="video-editing.html" class="readMore">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="Images/portfolio/3.jpg" alt="Reel Editing Project">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Photography Edit</h3>
+                    <p>Portrait photography with advanced retouching using Photoshop and PicsArt.</p>
+                    <a href="photography.html" class="readMore">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="Images/portfolio/4.jpg" alt="Photography Editing">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix uiux">
+                <div class="portfolio-content">
+                    <h3>UI/UX Mobile Design</h3>
+                    <p>Mobile app wireframe and prototype designed for intuitive user navigation.</p>
+                    <a href="uiux-design.html" class="readMore">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="Images/portfolio/5.jpg" alt="Mobile UI Design">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix branding">
+                <div class="portfolio-content">
+                    <h3>SFX &amp; Soundtrack</h3>
+                    <p>Custom sound effects and background score produced in FL Studio for a short film.</p>
+                    <a href="sfx-audio.html" class="readMore">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="Images/portfolio/6.jpg" alt="SFX Audio Project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="gallery" id="gallery">
+        <div class="main-text reveal">
+            <h2 class="heading">Gallery</h2>
+            <span class="sub-label">View posts from @abishekmoses18 on Instagram.</span>
+        </div>
+
+        <!-- Single Swiper instance containing all Instagram posts as slides -->
+        <div class="blog-box swiper mySwiper">
+            <div class="cards swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="card swiper-slide">
+                    <div class="post">
+                        <div class="card-top">
+                            <blockquote class="instagram-media"
+                                data-instgrm-captioned
+                                data-instgrm-permalink="https://www.instagram.com/p/DVeQlkVE6_9/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                data-instgrm-version="14"
+                                style="background:#FFF; border:0; border-radius:3px;
+                                       box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+                                       margin:1px; max-width:540px; min-width:326px; padding:0;
+                                       width:99.375%; width:calc(100% - 2px);">
+                                <div style="padding:16px;">
+                                    <a href="https://www.instagram.com/p/DVeQlkVE6_9/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style="background:#FFFFFF; line-height:0; padding:0; text-align:center; text-decoration:none; width:100%;"
+                                        target="_blank" rel="noopener">
+                                        <div style="display:flex; flex-direction:row; align-items:center;">
+                                            <div style="background-color:#F4F4F4; border-radius:50%; flex-grow:0; height:40px; margin-right:14px; width:40px;"></div>
+                                            <div style="display:flex; flex-direction:column; flex-grow:1; justify-content:center;">
+                                                <div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; margin-bottom:6px; width:100px;"></div>
+                                                <div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; width:60px;"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding:19% 0;"></div>
+                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                            <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                        <g>
+                                                            <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div style="padding-top:8px;">
+                                            <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
+                                        </div>
+                                    </a>
+                                    <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center;">
+                                        <a href="https://www.instagram.com/p/DVeQlkVE6_9/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                            style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                            target="_blank" rel="noopener">A post shared by Abishek Moses J (@abishekmoses18)</a>
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div><!-- /.swiper-slide -->
+
+                <!-- Slide 2 -->
+                <div class="card swiper-slide">
+                    <div class="post">
+                        <div class="card-top">
+                            <blockquote class="instagram-media"
+                                data-instgrm-captioned
+                                data-instgrm-permalink="https://www.instagram.com/p/DOOvOv1jynm/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                data-instgrm-version="14"
+                                style="background:#FFF; border:0; border-radius:3px;
+                                       box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+                                       margin:1px; max-width:540px; min-width:326px; padding:0;
+                                       width:99.375%; width:calc(100% - 2px);">
+                                <div style="padding:16px;">
+                                    <a href="https://www.instagram.com/p/DOOvOv1jynm/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style="background:#FFFFFF; line-height:0; padding:0; text-align:center; text-decoration:none; width:100%;"
+                                        target="_blank" rel="noopener">
+                                        <div style="display:flex; flex-direction:row; align-items:center;">
+                                            <div style="background-color:#F4F4F4; border-radius:50%; flex-grow:0; height:40px; margin-right:14px; width:40px;"></div>
+                                            <div style="display:flex; flex-direction:column; flex-grow:1; justify-content:center;">
+                                                <div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; margin-bottom:6px; width:100px;"></div>
+                                                <div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; width:60px;"></div>
+                                            </div>
+                                        </div>
+                                        <div style="padding:19% 0;"></div>
+                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                            <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                        <g>
+                                                            <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div style="padding-top:8px;">
+                                            <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
+                                        </div>
+                                    </a>
+                                    <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center;">
+                                        <a href="https://www.instagram.com/p/DOOvOv1jynm/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                            style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                            target="_blank" rel="noopener">A post shared by Abishek Moses J (@abishekmoses18)</a>
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div><!-- /.swiper-slide -->
+
+            </div><!-- /.swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+        </div><!-- /.blog-box.swiper -->
+
+        <div class="showcase">
+            <img src="shapes/ring.png" class="ring" alt="">
+            <img src="shapes/second-circle.png" class="second-circle" alt="">
+            <img src="shapes/circle.png" class="circle" alt="">
+            <img src="shapes/half-ring.png" class="half-ring" alt="">
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT + SKILLS ===================== -->
+    <section class="down-box" id="contact">
+        <div class="contactSkills">
+            <div class="contact-info">
+                <div class="main-text">
+                    <h2 class="heading">Contact Me</h2>
+                    <span>Get In Touch With Me</span>
+                </div>
+                <form action="Contact.php" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" cols="30" rows="10" placeholder="Your message..."></textarea>
+                    <div class="formBtn">
+                        <button type="submit" class="btn">Send Message <i class='bx bx-send'></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="skills">
+                <div class="container">
+                    <div class="skillBox">
+                        <div class="main-text">
+                            <h2 class="heading">My Skills</h2>
+                            <span>Let Me Help You</span>
+                        </div>
+                        <div class="skill-wrap">
+                            <div class="skill">
+                                <div class="outer-circle">
+                                    <div class="inner-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                            <defs>
+                                                <linearGradient id="GradientColor1">
+                                                    <stop offset="0%" stop-color="#e91e63" />
+                                                    <stop offset="100%" stop-color="#673ab7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="85" cy="85" r="75" stroke="url(#GradientColor1)" stroke-linecap="round" />
+                                        </svg>
+                                        <h2 class="counter"><span data-target="89">0</span>%</h2>
+                                    </div>
+                                </div>
+                                <div class="sk-title">Photoshop</div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="outer-circle">
+                                    <div class="inner-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                            <defs>
+                                                <linearGradient id="GradientColor2">
+                                                    <stop offset="0%" stop-color="#e91e63" />
+                                                    <stop offset="100%" stop-color="#673ab7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="85" cy="85" r="75" stroke="url(#GradientColor2)" stroke-linecap="round" />
+                                        </svg>
+                                        <h2 class="counter"><span data-target="47">0</span>%</h2>
+                                    </div>
+                                </div>
+                                <div class="sk-title">DaVinci Resolve</div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="outer-circle">
+                                    <div class="inner-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                            <defs>
+                                                <linearGradient id="GradientColor3">
+                                                    <stop offset="0%" stop-color="#e91e63" />
+                                                    <stop offset="100%" stop-color="#673ab7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="85" cy="85" r="75" stroke="url(#GradientColor3)" stroke-linecap="round" />
+                                        </svg>
+                                        <h2 class="counter"><span data-target="56">0</span>%</h2>
+                                    </div>
+                                </div>
+                                <div class="sk-title">FL Studio &amp; Logic Pro</div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="outer-circle">
+                                    <div class="inner-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                            <defs>
+                                                <linearGradient id="GradientColor4">
+                                                    <stop offset="0%" stop-color="#e91e63" />
+                                                    <stop offset="100%" stop-color="#673ab7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="85" cy="85" r="75" stroke="url(#GradientColor4)" stroke-linecap="round" />
+                                        </svg>
+                                        <h2 class="counter"><span data-target="19">0</span>%</h2>
+                                    </div>
+                                </div>
+                                <div class="sk-title">UI/UX Design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>Copyright &copy; 2026 by <span>Abishek Moses J</span> &mdash; All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scroll-to-top progress button -->
+    <div id="progress">
+        <span id="progress-value">
+            <i class='bx bxs-chevrons-up'></i>
+        </span>
+    </div>
+
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- MixItUp JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
