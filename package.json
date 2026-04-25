@@ -1,0 +1,20 @@
+{
+  "name": "abishekmoses-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Abishek Moses J",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site"
+  ],
+  "author": "Abishek Moses J",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.14"
+  }
+}
